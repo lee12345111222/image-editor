@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "get_sku_trees",
+  "info": {
+    "singularName": "get-sku-tree",
+    "pluralName": "get-sku-trees",
+    "displayName": "getSkuTree",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "parentId": {
+      "type": "string"
+    },
+    "unitName": {
+      "type": "string"
+    },
+    "unitPrice": {
+      "type": "string"
+    }
+  }
+}

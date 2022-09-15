@@ -56,20 +56,19 @@
 		<script src='assets/js/jquery.js'></script>
 		<script src="assets/js/hammer.min.js"></script>
 		<script src='assets/js/ImageEditor.js'></script>
-		<script>
+		<script crossorigin="anonymous">
 			var editor = null;
 			$(document).ready(function() {
 				editor = $('#editor').ImageEditor({
 					imageUrls: [
-						'assets/images/pic-2.jpg',
-						'assets/images/background-1.png',
-						'assets/images/mustache.png'
+						'assets/images/pic.png',
+						'assets/images/frame1.png',
 					],
 					removeIcon: 'assets/images/delete.png',
 					width: 400,
 					height: 300,
 					onInitCompleted: function() {
-						editor.selectImage(2);
+						editor.selectImage(0);
 					}
 				});
 			});
@@ -77,10 +76,12 @@
 			function confirmImage() {
 				var cvs = editor.mergeImage(),
 					$img = $('<img>');
+				$img.attr('crossorigin', 'anonymous');
+				console.log($img, '$img')
 
 				$img.attr('src', cvs.toDataURL());
-				//$('#outputs').append($img);
-				$('#outputs').append($(cvs));
+				$('#outputs').append($img);
+				// $('#outputs').append($(cvs));
 			}
 
 		</script>
@@ -98,22 +99,17 @@
 				<ul id='frameList'>
 					<li>
 						<img height='60'
-							src='assets/images/background-1.png'
+							src='assets/images/frame1.png'
 							onclick='editor.setImage(this.src, 1);' />
 					</li>
 					<li>
 						<img height='60'
-							src='assets/images/background-2.png'
+							src='assets/images/frame2.png'
 							onclick='editor.setImage(this.src, 1);' />
 					</li>
 					<li>
 						<img height='60'
-							src='assets/images/background-3.png'
-							onclick='editor.setImage(this.src, 1);' />
-					</li>
-					<li>
-						<img height='60'
-							src='assets/images/background-4.png'
+							src='assets/images/frame3.png'
 							onclick='editor.setImage(this.src, 1);' />
 					</li>
 				</ul>

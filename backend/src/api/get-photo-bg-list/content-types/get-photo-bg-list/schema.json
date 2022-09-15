@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "get_photo_bg_lists",
+  "info": {
+    "singularName": "get-photo-bg-list",
+    "pluralName": "get-photo-bg-lists",
+    "displayName": "getPhotoBgList"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
